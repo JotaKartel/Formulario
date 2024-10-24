@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Validación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css"/>
+    <script src="js/regExp.js"></script>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div id="divFormulario" class="card">
+            <div class="card-header">
+                <h4>Formulario de Validación</h4>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="txtNombre">Nombre:</label>
+                        <input autofocus type="text" class="form-control" id="txtNombre" name="nombre" placeholder="Nombre (2-100)">
+                        <div id="divValNombre" class="validation-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtTelefonoFijo">Teléfono fijo:</label>
+                        <input type="text" class="form-control" id="txtTelefonoFijo" name="telefonoFijo" placeholder="Teléfono fijo">
+                        <div id="divValTlfF" class="validation-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtTelefonoMovil">Teléfono móvil:</label>
+                        <input type="text" class="form-control" id="txtTelefonoMovil" name="telefonoMovil" placeholder="Teléfono móvil">
+                        <div id="divValTlfM" class="validation-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCP">Código Postal:</label>
+                        <input type="text" class="form-control" id="txtCP" name="codigoPostal" placeholder="Código Postal">
+                        <div id="divValCP" class="validation-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtFNac">Fecha de Nacimiento:</label>
+                        <input type="text" class="form-control" id="txtFNac" name="fechaNacimiento" placeholder="DD/MM/YYYY">
+                        <div id="divValFNac" class="validation-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEmail">Email:</label>
+                        <input type="email" class="form-control" id="txtEmail" name="email" placeholder="Email">
+                        <div id="divValEmail" class="validation-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selCoche">Tipo de Coche:</label>
+                        <select class="form-control" id="selCoche" name="tipoCoche">
+                            <option value="">Seleccione...</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="suv">SUV</option>
+                            <option value="coupé">Coupé</option>
+                        </select>
+                        <div id="divValSelCoche" class="validation-message"></div>
+                    </div>
+                    <div class="form-group" id="divCasillas">
+                        <label>Extras del coche:</label><br/>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="gps" id="extraGPS">
+                            <label class="form-check-label" for="extraGPS">GPS</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="asientosCalefaccion" id="extraAsientosCalefaccion">
+                            <label class="form-check-label" for="extraAsientosCalefaccion">Asientos calefaccionados</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="cámaraReversa" id="extraCamaraReversa">
+                            <label class="form-check-label" for="extraCamaraReversa">Cámara de reversa</label>
+                        </div>
+                        <div id="divValCExtra" class="validation-message"></div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="butValidar">Validar</button>
+                </form>
+            </div>
+        </div>
+        <div id="divDatos" class="card mt-3" style="display: none;">
+            <div class="card-header">
+                <h4>Datos Ingresados</h4>
+            </div>
+            <div class="card-body">
+                <p id="nombreDatos"></p>
+                <p id="telefonoFijoDatos"></p>
+                <p id="telefonoMovilDatos"></p>
+                <p id="cpDatos"></p>
+                <p id="fechaNacDatos"></p>
+                <p id="emailDatos"></p>
+                <p id="tipoCocheDatos"></p>
+                <p id="extrasDatos"></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/viewFormulario.js"></script>
+</body>
+</html>
